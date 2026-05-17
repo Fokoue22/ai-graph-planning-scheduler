@@ -1,0 +1,28 @@
+
+(Berlin PLACE)
+(Cairo PLACE)
+(Seoul PLACE)
+(Brasilia PLACE)
+(r1 ROCKET)
+(r2 ROCKET)
+(r3 ROCKET)
+(omega CARGO)
+(sigma CARGO)
+(lambda CARGO)
+
+(preconds
+(at r1 Berlin)
+(at r2 Berlin)
+(at r3 Cairo)
+(at omega Berlin)
+(at sigma Berlin)
+(at lambda Berlin)
+(has-fuel r1)
+(has-fuel r2)
+(has-fuel r3))
+
+(effects
+(at omega Cairo)
+(at sigma Seoul)
+(at lambda Brasilia))
+
