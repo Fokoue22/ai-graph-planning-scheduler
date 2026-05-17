@@ -89,7 +89,32 @@ Le projet suit le format d'E/S attendu dans l'enonce et les exemples fournis.
 
 Important: dans cette version, l'appel standard est base sur deux fichiers (`r_ops` et `r_facts`) afin de rester conforme a la specification generale.
 
-## 6) Execution rapide
+## 6) Prerequis et installation
+
+Prerequis:
+
+- Python 3.10 ou plus recent
+- pip (gestionnaire de paquets Python)
+
+Installation (Windows PowerShell):
+
+```bash
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+```
+
+Installation (macOS/Linux):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+Ce projet n'utilise pas de dependances externes obligatoires pour executer le coeur Graphplan. L'environnement virtuel est recommande pour isoler l'execution.
+
+## 7) Execution rapide
 
 Depuis la racine du projet:
 
@@ -109,7 +134,7 @@ Selon la configuration du script principal, la sortie affiche:
 - La sequence d'actions du plan
 - Eventuellement des informations de trace/debug
 
-## 7) Correspondance avec la description du TP
+## 8) Correspondance avec la description du TP
 
 Ce qui est respecte par rapport a la description:
 
@@ -119,7 +144,7 @@ Ce qui est respecte par rapport a la description:
 - Recherche d'un plan valide et optimal (minimal en nombre d'actions/niveaux)
 - Format inspire des exemples fournis pour faciliter l'evaluation
 
-## 8) Exemples inclus
+## 9) Exemples inclus
 
 Le dossier `Exemples/` contient plusieurs cas (`r_fact2`, `r_fact3`, ..., `r_fact9`) ainsi que des fichiers de simulation. Cela permet:
 
@@ -127,7 +152,7 @@ Le dossier `Exemples/` contient plusieurs cas (`r_fact2`, `r_fact3`, ..., `r_fac
 - De comparer les sorties avec les traces deja generees
 - De reproduire rapidement des scenarios vus pendant le developpement
 
-## 9) Limites et pistes d'amelioration
+## 10) Limites et pistes d'amelioration
 
 Ameliorations possibles pour une version production:
 
@@ -137,11 +162,11 @@ Ameliorations possibles pour une version production:
 - Ajouter une CLI plus robuste (validation des arguments, niveaux de verbosite)
 - Ajouter une visualisation du graphe de planification
 
-## 10) Credits
+## 11) Credits
 
 Projet realise dans le cadre du cours IFT702 - Planification en intelligence artificielle, puis structure en depot Git autonome pour conservation, reproductibilite et evolution.
 
-## 11) Auteur
+## 12) Auteur
 
 Ce projet a ete realise par **Fokoue Thomas**. La conception, l'implementation et l'integration des elements du projet ont ete effectuees par l'auteur.
 
