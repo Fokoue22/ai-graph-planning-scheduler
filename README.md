@@ -162,11 +162,21 @@ Ameliorations possibles pour une version production:
 - Ajouter une CLI plus robuste (validation des arguments, niveaux de verbosite)
 - Ajouter une visualisation du graphe de planification
 
-## 11) Credits
+## 11) Roadmap
+
+Evolutions prevues du projet:
+
+- [ ] Ajouter des tests unitaires et des tests d'integration sur les cas `Exemples/`
+- [ ] Ajouter une sortie JSON standardisee pour faciliter l'exploitation externe
+- [ ] Ajouter un mode benchmark (temps d'execution, taille du graphe, nombre de mutex)
+- [ ] Ajouter une visualisation du graphe de planification (export Graphviz)
+- [ ] Ajouter une interface CLI plus complete (aide, options de trace, niveau de verbosite)
+
+## 12) Credits
 
 Projet realise dans le cadre du cours IFT702 - Planification en intelligence artificielle, puis structure en depot Git autonome pour conservation, reproductibilite et evolution.
 
-## 12) Auteur
+## 13) Auteur
 
 Ce projet a ete realise par **Fokoue Thomas**. La conception, l'implementation et l'integration des elements du projet ont ete effectuees par l'auteur.
 
