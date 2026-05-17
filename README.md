@@ -166,7 +166,6 @@ Ameliorations possibles pour une version production:
 
 Evolutions prevues du projet:
 
-- [ ] Ajouter des tests unitaires et des tests d'integration sur les cas `Exemples/`
 - [ ] Ajouter une sortie JSON standardisee pour faciliter l'exploitation externe
 - [ ] Ajouter un mode benchmark (temps d'execution, taille du graphe, nombre de mutex)
 - [ ] Ajouter une visualisation du graphe de planification (export Graphviz)
