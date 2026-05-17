@@ -140,3 +140,8 @@ Ameliorations possibles pour une version production:
 ## 10) Credits
 
 Projet realise dans le cadre du cours IFT702 - Planification en intelligence artificielle, puis structure en depot Git autonome pour conservation, reproductibilite et evolution.
+
+## 11) Auteur
+
+Ce projet a ete realise par **Fokoue Thomas**. La conception, l'implementation et l'integration des elements du projet ont ete effectuees par l'auteur.
+
