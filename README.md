@@ -37,7 +37,50 @@ Le depot contient une implementation complete et testable avec separation des re
 - Traces/resultats d'execution pour validation (`trace_case3.txt`, `trace_case9.txt`, `fact9_out.txt`, `fact9_summary.txt`)
 - Jeux de donnees d'exemple (`Exemples/`)
 
-## 4) Structure des fichiers d'entree
+## 4) Structure des fichiers / Architecture
+
+Vue d'ensemble du depot:
+
+```text
+ai-graph-planning-scheduler/
+|- Exemples/
+|  |- r_ops.txt
+|  |- r_fact2.txt ... r_fact9.txt
+|  |- simulation_fact2.txt ... simulation_fact9.txt
+|  |- my_case3.txt
+|  `- my_case9.txt
+|- parser.py
+|- planning_graph.py
+|- graphplan.py
+|- main.py
+|- run_fact9.py
+|- trace_case3.txt
+|- trace_case9.txt
+|- fact9_out.txt
+|- fact9_summary.txt
+|- readme.txt
+`- README.md
+```
+
+Architecture logique:
+
+- `main.py`: point d'entree CLI, orchestration globale et affichage des resultats
+- `parser.py`: lecture/validation des fichiers `r_ops` et `r_facts`
+- `planning_graph.py`: construction des niveaux de faits/actions et gestion des mutex
+- `graphplan.py`: extraction du plan, backtracking et controle d'optimalite
+- `run_fact9.py`: script de demonstration/reproduction rapide sur un cas de reference
+- `Exemples/`: jeux d'essai pour verifier la conformite des entrees/sorties
+- `trace_*.txt` et `fact9_*.txt`: traces et sorties de verification
+
+Flux principal:
+
+1. `main.py` recoit les chemins des fichiers d'entree
+2. `parser.py` transforme les fichiers texte en structures internes
+3. `planning_graph.py` construit le graphe couche par couche
+4. `graphplan.py` tente l'extraction d'un plan valide et minimal
+5. Le plan (ou l'echec) est affiche/sauvegarde selon le mode d'execution
+
+## 5) Structure des fichiers d'entree
 
 Le projet suit le format d'E/S attendu dans l'enonce et les exemples fournis.
 
@@ -46,7 +89,7 @@ Le projet suit le format d'E/S attendu dans l'enonce et les exemples fournis.
 
 Important: dans cette version, l'appel standard est base sur deux fichiers (`r_ops` et `r_facts`) afin de rester conforme a la specification generale.
 
-## 5) Execution rapide
+## 6) Execution rapide
 
 Depuis la racine du projet:
 
@@ -66,7 +109,7 @@ Selon la configuration du script principal, la sortie affiche:
 - La sequence d'actions du plan
 - Eventuellement des informations de trace/debug
 
-## 6) Correspondance avec la description du TP
+## 7) Correspondance avec la description du TP
 
 Ce qui est respecte par rapport a la description:
 
@@ -76,7 +119,7 @@ Ce qui est respecte par rapport a la description:
 - Recherche d'un plan valide et optimal (minimal en nombre d'actions/niveaux)
 - Format inspire des exemples fournis pour faciliter l'evaluation
 
-## 7) Exemples inclus
+## 8) Exemples inclus
 
 Le dossier `Exemples/` contient plusieurs cas (`r_fact2`, `r_fact3`, ..., `r_fact9`) ainsi que des fichiers de simulation. Cela permet:
 
@@ -84,7 +127,7 @@ Le dossier `Exemples/` contient plusieurs cas (`r_fact2`, `r_fact3`, ..., `r_fac
 - De comparer les sorties avec les traces deja generees
 - De reproduire rapidement des scenarios vus pendant le developpement
 
-## 8) Limites et pistes d'amelioration
+## 9) Limites et pistes d'amelioration
 
 Ameliorations possibles pour une version production:
 
@@ -94,6 +137,6 @@ Ameliorations possibles pour une version production:
 - Ajouter une CLI plus robuste (validation des arguments, niveaux de verbosite)
 - Ajouter une visualisation du graphe de planification
 
-## 9) Credits
+## 10) Credits
 
 Projet realise dans le cadre du cours IFT702 - Planification en intelligence artificielle, puis structure en depot Git autonome pour conservation, reproductibilite et evolution.
